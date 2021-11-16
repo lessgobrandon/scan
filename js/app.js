@@ -257,7 +257,7 @@ function processQr(aQrTxt) {
         decoded.lastName=tDecoded.lastname.charAt(0);
         var tDateParts=tDecoded.birthdate.split('-');
         decoded.birthDay=tDateParts[2];
-        decoded.birthMonth=months[tDateParts[1]];
+        decoded.birthMonth=months[parseInt(tDateParts[1])];
     }
 
     if(data.scan.startsWith('NL2:') ) {
